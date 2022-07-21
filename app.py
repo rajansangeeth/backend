@@ -3,7 +3,6 @@ from flask_restful import Api
 from database.db_connection import create_database
 from routes import initialize_routes
 from flask_cors import CORS, cross_origin
-from flask_mail import Mail
 from flask_jwt_extended import JWTManager
 
 app = Flask(__name__)
