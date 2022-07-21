@@ -15,7 +15,7 @@ class Company(EmbeddedDocument):
 class Persons(Document):
     index = IntField()
     name = StringField()
-    isActive = BooleanField()
+    isActive = BooleanField(default=False)
     registered = DateTimeField()
     age = IntField()
     gender = StringField()

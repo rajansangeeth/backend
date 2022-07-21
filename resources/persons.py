@@ -185,4 +185,4 @@ class InsertData(Resource):
 
         # fetch_all = json.loads(Persons.objects().only('name'))
         fetch_all = Persons.objects()
-        return {'only_one': only_one, 'fetch_all': json.loads(fetch_all.to_json())}, 200
+        return {'only_one': json.loads(only_one.to_json()), 'fetch_all': json.loads(fetch_all.to_json())}, 200
