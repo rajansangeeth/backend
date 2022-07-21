@@ -173,10 +173,11 @@ class Getone(Resource):
 class InsertData(Resource):
     def post(self):
         data = request.get_json()
+        print(data)
         person = Persons(**data)
         text = mail_data
         print(data['name'])
-        person.content = text.format(supervisor='Sangeeth', name='Selwin', sender='Rajan')
+        person.content = text.format(supervisor='Smith', name='Watson', sender='Kholi')
         person.save()
 
         only_one = Persons.objects.get(name="Grace Larson")
